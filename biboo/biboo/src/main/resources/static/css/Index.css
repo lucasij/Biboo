@@ -1,0 +1,93 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+.back{
+    background-image: url(dog.jpg);
+    background-repeat: no-repeat, repeat;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.content{
+    position: relative;
+    width: 30%;
+    height: 60%;
+    float: right;
+    margin-right: 70px;
+    margin-top: 10%;
+    background: #00000096;
+    border-radius: 20px;
+}
+.iSenha{
+    width: 50%;
+    background: #ffffff17;
+    border: #ffffff9e 1.5px solid;
+    border-radius: 20px;
+    outline: none;
+    height: 30px;
+    color: #ffffffb8;
+    padding-left: 15px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.iLogin{
+    width: 50%;
+    background: #ffffff17;
+    border: #ffffff9e 1.5px solid;
+    border-radius: 20px;
+    outline: none;
+    height: 30px;
+    color: #ffffffb8;
+    padding-left: 15px;
+    font-size: 20px;
+}
+.iDiv{
+    position: relative;
+}
+.logo{
+    position: relative;
+    border-radius: 100%;
+    background: #ff000082;
+    height: 180px;
+    margin-top: 20px;
+    vertical-align: middle; /*Vertically centered*/
+    text-align: center; /* Horizontally centered */
+    margin-bottom: 20px;
+}
+.dLogo{
+    display: table;
+}
+.iButtonEnt{
+    background-color: #ffffff66;
+    position: relative;
+    margin-right: 34px;
+    height: 33px;
+    font-size: 18px;
+    color: #050902;
+    width: 78px;
+    border-radius: 20px;
+    border: #ffffff9e 1.5px solid;
+}
+.iButtonCad{
+    background-color: #ffffff66;
+    position: relative;
+    height: 33px;
+    font-size: 18px;
+    color: #050902;
+    width: 98px;
+    border-radius: 20px;
+    border: #ffffff9e 1.5px solid;
+}
+.bDiv{
+    position: relative;
+    margin-top: 30px;
+}
