@@ -11,14 +11,14 @@
 <body>
     <img class="back" th:src="@{/img/dog.jpg}" />
     <div class="content">
-    	<form action="#" th:action="@{/login}" th:object="${credenciais}" method="post" onsubmit="return validaForm(this);">
+    	<form action="#" th:action="@{/cadastro}" th:object="${credenciais}" method="post" onsubmit="return validaForm(this);">
             <img class="logo" th:src="@{/img/logo.png}" >
         <div class="iDiv">
             <input class="iLogin" placeholder="Login" type="text" th:field="*{usuario}" id="usuario" >
             <input class="iSenha" placeholder="Senha" type="text" th:field="*{senha}" id="senha" >
         </div>
         <div class="bDiv" >
-            <button class="iButtonEnt" >Entrar</button>
+            <button class="iButtonEnt" onclick="ent();" >Entrar</button>
             <button class="iButtonCad" >Cadastrar</button>
         </div>
         </div>
@@ -26,4 +26,9 @@
     </div>
     
 </body>
+<script>
+	function ent(){
+		window.location = "/login";
+	}
+</script>
 </html>
