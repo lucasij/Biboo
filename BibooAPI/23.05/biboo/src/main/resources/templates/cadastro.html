@@ -1,0 +1,43 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+       	<form action="#" th:action="@{/cadastro}" th:object="${usuario}" method="post" onsubmit="return validaForm(this);">
+            
+        <div class="iDiv">
+            <input class="iLogin" placeholder="CPF" type="text" th:field="*{CPF}" id="CPF" >
+            <input class="iSenha" placeholder="nome" type="text" th:field="*{nome}" id="nome" >
+            <input class="iSenha" placeholder="senha" type="text" th:field="*{senha}" id="senha" >
+            <input class="iSenha" placeholder="email" type="text" th:field="*{email}" id="email" >
+            <input class="iSenha" placeholder="telefone" type="text" th:field="*{telefone}" id="telefone" >
+            <input class="iSenha" placeholder="cidade" type="text" th:field="*{cidade}" id="cidade" >
+            
+        </div>
+        <div class="bDiv" >
+            <button class="iButtonEnt" onclick="ent();" >Entrar</button>
+            <button class="iButtonCad" >Cadastrar</button>
+        </div>
+        	
+        </form>
+        <div id="diferenciado"> </div>
+        <br />
+       	
+</body>
+<script>
+$.ajax({
+	type: "get",
+    contentType: "application/json;charset=UTF-8",
+    url: "http://localhost:8888/",
+    crossDomain: true  
+  }).done(function(msg) {
+      console.log(msg);
+      $('#diferenciado').html(msg);
+    })
+    .fail(function(jqXHR, textStatus, msg) {
+      console.log(jqXHR);
+      console.log(textStatus);
+      console.log(msg);
+    });
+</script>
+</html>
+

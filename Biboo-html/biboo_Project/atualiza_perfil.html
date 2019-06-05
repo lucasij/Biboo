@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Biboo - Atualiza Perfil</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="img/biboo.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/elementos.css">
+    <link rel="stylesheet" type="text/css" href="css/atualiza_perfil.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<!--===============================================================================================-->
+</head>
+<body>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+        <h1 id="colorlib-logo"><a href="index.html"><span class="img" style="background-image: url(img/author.jpg);"></span><p style="color: orangered; font-size: 18px">Carlos PH</p></h1>
+        <nav id="colorlib-main-menu" role="navigation">
+            <ul>
+                <li style=" margin-top: 18px;"><a style="color: orangered; font-size: 16px" href="blog-home.html">Home</a></li>
+                <li style=" margin-top: 18px;"><a style="color: orangered; font-size: 16px" href="atualiza_perfil.html">Atualizar Perfil</a></li>
+                <li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="perfil_cachorro.html">Cadastrar Dog</a></li>
+                <li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="services.html">Configurações</a></li>
+                <li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="home_page.html">Sair</a></li>
+            </ul>
+        </nav>
+    </aside>
+	<div class="bg-contact3" style="background-image: url('img/doguinho-17.jpg');">
+		<div class="container-contact3">
+			<div class="wrap-contact3" style="margin-left: 18rem">
+				<form class="contact3-form validate-form">
+					<span class="contact3-form-title">
+						Atualizar Perfil
+					</span>
+
+					<div class="wrap-contact3-form-radio">
+						<div class="contact3-form-radio m-r-42">
+							<input class="input-radio3" id="radio1" type="radio" name="choice" value="say-hi" checked="checked">
+							<label class="label-radio3" for="radio1">
+								Usuário
+							</label>
+						</div>
+
+						<div class="contact3-form-radio">
+							<input class="input-radio3" id="radio2" type="radio" name="choice" value="get-quote">
+							<label class="label-radio3" for="radio2">
+								Cachorro
+							</label>
+						</div>
+					</div>
+
+					<div class="wrap-input3 validate-input" data-validate="Nome é obrigatório">
+						<input class="input3" type="text" name="name" placeholder="Apelido"/>
+					</div>
+
+					<div class="wrap-input3 validate-input	" data-validate = "Validação de email é obrigatória: ex@abc.xyz">
+						<input class="input3" type="text" name="email" placeholder="Email">
+						<span class="focus-input3"></span>
+                    </div>
+
+                    <div class="wrap-input3 input3-select">
+                            <div>
+                                <input class="input3" name="email" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Data da ultima Vacina">
+                            </div>
+                            <span class="focus-input3"></span>
+                        </div>
+
+					<div class="wrap-input3 input3-select">
+						<div>
+							<select class="selection-2" name="sexo">
+								<option value="" disabled selected>Sexo do pet:</option>
+								<option>Macho</option>
+								<option>Fêmea</option>
+							</select>
+						</div>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 input3-select">
+						<div>
+							<select class="selection-2" name="budget" >
+								<option value="" disabled selected>Idade do pet:</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+								<option>13</option>
+								<option>14</option>
+								<option>15</option>
+								<option>16</option>
+								<option>17</option>
+								<option>18</option>
+								<option>19</option>
+								<option>20</option>
+							</select>
+						</div>
+						<span class="focus-input3"></span>
+                    </div>
+
+                    <div class="wrap-input3 input3-select">
+                            <div>
+                                <textarea class="input3" name="message" placeholder="Hobbies"></textarea>
+                            </div>
+                            <span class="focus-input3"></span>
+                        </div>
+                    
+                    <div class="wrap-input3 validate-input" data-validate = "Coloque sua senha de acesso">
+                            <input class="input3" type="password" name="senha" placeholder="Confirmar Senha">
+                            <span class="focus-input3"></span>
+                        </div>
+
+					<div class="container-contact3-form-btn">
+						<button class="contact3-form-btn">
+							Atualizar
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="js/atualiza.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
