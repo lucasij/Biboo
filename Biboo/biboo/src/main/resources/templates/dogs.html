@@ -1,0 +1,23 @@
+<head>
+</head>
+<body>
+<h1>Cadastro Dogs</h1>
+       	<form action="#" th:action="@{/pets}" th:object="${credenciaisPet}" method="post" >
+            
+        <div class="iDiv">
+        	
+            <input class="iLogin" placeholder="apelido" type="text" th:field="*{apelido}" id="CPF" >
+            <input class="iSenha" placeholder="idade" type="text" value = "" th:field="*{idade}" id="nome" >
+            <input class="iSenha" placeholder="cor" type="text" th:field="*{cor}" id="senha" >
+            <input class="iSenha" placeholder="raca" type="text" th:field="*{raca}" id="email" >
+            <input class="iSenha" placeholder="pelgem" type="text" th:field="*{pelagem}" id="telefone" >
+            <input class="iSenha" placeholder="tamanho" type="text" th:field="*{tamanho}" id="telefone" >
+        </div>
+        <div class="bDiv" >
+            
+            <button class="iButtonCad" >Cadastrar</button>
+        </div>
+        </div>
+        </form> 
+</body>
+</html>

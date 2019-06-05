@@ -1,2 +1,0 @@
-# Biboo
-Grupo ZiKa

@@ -1,0 +1,178 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+
+<script type="text/javascript" src="nicEdit-latest.js"></script>
+  <script type="text/javascript">
+//<![CDATA[
+  bkLib.onDomLoaded(function() {
+        new nicEditor({maxHeight : 200}).panelInstance('area');
+        new nicEditor({fullPanel : true,maxHeight : 200}).panelInstance('area1');
+  });
+  //]]>
+  </script>
+
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Biboo</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/animate.min.css">
+			<link rel="stylesheet" href="css/styles.css">
+		</head>
+
+		<body class="blog-page">
+		<form>
+		
+		</form>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+			<h1 id="colorlib-logo"><a href="index.html"><span class="img" style="background-image: url(img/author.jpg);"></span><p style="color: orangered; font-size: 18px">Carlos PH</p></h1>
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li style=" margin-top: 18px;"><a style="color: orangered; font-size: 16px" href="blog-home.html">Home</a></li>
+					<li style=" margin-top: 18px;"><a style="color: orangered; font-size: 16px" href="perfil">Perfil Usuário</a></li>
+					<li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="about.html">Perfil Dog</a></li>
+					<li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="services.html">Configurações</a></li>
+					<li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="home_page.html">Sair</a></li>
+				</ul>
+			</nav>
+		</aside> <!-- END COLORLIB-ASIDE -->							
+				
+			<!-- Start post-content Area -->
+			<section class="post-content-area">
+				<div class="container" style="float: right;">
+					<div class="row">
+            <div class="col-lg-8">
+			<div class="main-ws-sec">
+                  <div class="post-topbar">
+                    <div class="user-picy">
+                      <img src="images/resources/user-pic.png" alt="">
+                    </div>
+                    <div class="post-st">
+                      <ul>
+                        <li><a class="post-jb active" href="#" title="">Postagem</a></li>
+                      </ul>
+                    </div><!--post-st end-->
+                  </div><!--post-topbar end-->
+                  <div class="posts-section">
+                    <div th:each="p : ${pets}" class="post-bar">
+                      <div class="post_topbar">
+                        <div class="usy-dt">
+                          <img src="images/resources/us-pic.png" alt="">
+                          <div class="usy-name">
+                            <h3 th:text="${p.apelido}" ></h3>
+                            <span><img src="images/clock.png" alt=""></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="epi-sec">
+                        <img src="img/dog8.jpg">
+                      </div>
+                      <div class="job-status-bar">
+                        <ul class="like-com">
+                          <li>
+                          	<form action="#" th:action="@{/match}" th:object="${p}" method="post">
+                          		<button><i class="la la-heart"></i> Curtir</button>
+                          	</form>
+                            
+                          </li> 
+                          <li><a href="#" title="" class="com"> Comentários 15</a></li>
+                        </ul>
+                        <a><i class="la la-eye"></i>Visualizações 50</a>
+                      </div>
+                    </div><!--post-bar end-->
+                    
+                  
+                    <div class="process-comm">
+                      <a href="#" title=""><img src="images/process-icon.png" alt=""></a>
+                    </div><!--process-comm end-->
+                  </div><!--posts-section end-->
+                </div><!--main-ws-sec end-->						
+              </div>
+						<div class="col-lg-4 sidebar-widgets">
+							<div class="widget-wrap">
+								<div class="single-sidebar-widget search-widget">
+									<form class="search-form" action="#" th:action="@{/principal}" th:object="${pesquisa}" method="post">
+			                            <input placeholder="Pesquise" th:field="*{busca}" name="busca" type="text" style='width:70%;outline: 0;box-shadow: none ! important;' onblur="this.placeholder = 'Pesquise'">
+			                            <button type="submit" style="outline: 0;box-shadow: none ! important;"><i class="fa fa-search"></i></button>
+			                        </form>
+								</div>			
+								<div class="single-sidebar-widget popular-post-widget">
+									<h4 class="popular-title">Meus Dogs</h4>
+									<div class="popular-post-list">
+										<div class="single-post-list d-flex flex-row align-items-center">
+											<div class="thumb" style="width: 40%">
+												<img class="img-fluid" style="border-radius: 45%" src="img/dog1.jpg" alt="">
+											</div>
+											<div class="details">
+												<a href="blog-single.html"><h6>Totó</h6></a>
+												<p> <span class="lnr lnr-eye"></span> 120 Visualizações</p>
+
+                      </div>                     </div>
+<div class="single-post-list d-flex flex-row align-items-center">
+<div class="thumb" style="width: 40%">                         <img class
+="img-fluid" style="border-radius: 45%" src="img/dog2.jpg" alt="">
+</div>                       <div class="details">                         <a
+href="blog-single.html"><h6>Thor</h6></a>                         <p> <span
+class="lnr lnr-eye"></span> 50 Visualizações</p>                       </div>
+</div>                     <div class="single-post-list d-flex flex-row align-
+items-center">                       <div class="thumb" style="width: 40%">
+<img class="img-fluid" style="border-radius: 45%" src="img/dog3.jpg" alt="">
+</div>                       <div class="details">                         <a
+href="blog-single.html"><h6>Bob</h6></a>                       <p> <span
+class="lnr lnr-eye"></span> 67 Visualizações</p>                       </div>
+</div>                     <div class="single-post-list d-flex flex-row align-
+items-center">                       <div class="thumb" style="width: 40%">
+<img class="img-fluid" style="border-radius: 45%" src="img/dog4.jpg" alt="">
+</div>                       <div class="details">                         <a
+href="blog-single.html"><h6>Tobias</h6></a>                         <p> <span
+class="lnr lnr-eye"></span> 100 Visualizações</p>                       </div>
+</div>                                                 </div>
+</div>                 <div class="single-sidebar-widget ads-widget">
+<a href="#"><img class="img-fluid" src="img/blog/ads-banner.jpg" alt=""></a>
+</div>
+								
+								<div class="single-sidebar-widget newsletter-widget">
+									<h4 class="newsletter-title">Mapa</h4>
+									<div class="form-group d-flex flex-row">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.9632465854284!2d-46.657786885071054!3d-23.533824284696642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5814297d495f%3A0x1e05632aecd6b426!2sMarechal+Deodoro!5e0!3m2!1spt-BR!2sbr!4v1557791197555!5m2!1spt-BR!2sbr" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+  							</div>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End post-content Area -->
+		</body>
+	</html>
+<script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>
+
+<script type="text/javascript">
+        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() }); // convert all text areas to rich text editor on that page
+
+        bkLib.onDomLoaded(function() {
+             new nicEditor().panelInstance('area1');
+        }); // convert text area with id area1 to rich text editor.
+
+        bkLib.onDomLoaded(function() {
+             new nicEditor({fullPanel : true}).panelInstance('area2');
+        }); // convert text area with id area2 to rich text editor with full panel.
+</script>
+
+ 

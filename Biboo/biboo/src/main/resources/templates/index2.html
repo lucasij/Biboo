@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    
+</head>
+<body>
+    
+    <div class="content">
+    	<form action="#" th:action="@{/login}" th:object="${credenciais}" method="post" onsubmit="return validaForm(this);">
+            
+        <div class="iDiv">
+            <input class="iLogin" placeholder="nome" type="text" th:field="*{nome}" id="nome" >
+            <input class="iSenha" placeholder="senha" type="text" th:field="*{senha}" id="senha" >
+        </div>
+        <div class="bDiv" >
+            <button class="iButtonEnt" >Entrar</button>
+            <input type="button" class="iButtonCad" placeholder="cadastro" onclick="cad();" />
+        </div>
+        </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+    	function cad(){
+    		window.location = "/cadastro";
+    		return false;
+    	}
+    
+    </script>
+</body>
+
+</html>

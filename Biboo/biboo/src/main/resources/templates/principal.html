@@ -1,0 +1,25 @@
+<h1>Principal</h1>
+
+<input type="button" value="Sair" onclick="sair()" />
+<input type="button" value="Cadastrar Pet" onclick="pets()" />
+
+<table>
+<tr th:each="p : ${pets}" >
+    <td th:text="${p.apelido}"></td>
+    <td th:text="${p.pelagem}"></td>
+    <td th:switch="${p.raca}">
+    	<span th:case="Rusky">Imagen do Rusky</span>
+        <span th:case="mexicano">Imagen do Pincher</span>
+	</tr>
+</table>
+
+
+<script>
+	function sair(){
+		window.location = "/login";
+	}
+	function pets(){
+		window.location = "/pets";
+	}
+
+</script>

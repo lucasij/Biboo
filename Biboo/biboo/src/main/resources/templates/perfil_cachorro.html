@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Biboo - Atualiza Perfil</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="img/biboo.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/elementos.css">
+    <link rel="stylesheet" type="text/css" href="css/perfil_animal.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<!--===============================================================================================-->
+</head>
+<body>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+        <h1 id="colorlib-logo"><a href="index.html"><span class="img" style="background-image: url(img/author.jpg);"></span><p style="color: orangered; font-size: 18px">Carlos PH</p></h1>
+        <nav id="colorlib-main-menu" role="navigation">
+            <ul>
+                <li style=" margin-top: 18px;"><a style="color: orangered; font-size: 16px" href="blog-home.html">Home</a></li>
+                <li style=" margin-top: 18px;"><a style="color: orangered; font-size: 16px" href="atualiza_perfil.html">Atualizar Perfil</a></li>
+                <li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="about.html">Perfil Dog</a></li>
+                <li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="services.html">Configurações</a></li>
+                <li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="home_page.html">Sair</a></li>
+            </ul>
+        </nav>
+    </aside>
+	<div class="bg-contact3" style="background-image: url('img/doguinho-17.jpg');">
+		<div class="container-contact3">
+			<div class="wrap-contact3" style="margin-left: 18rem">
+				<form class="contact3-form validate-form">
+					<span class="contact3-form-title">
+						Cadastrar Pet
+					</span>
+
+					<div class="wrap-contact3-form-radio">
+
+					<div class="wrap-input3 validate-input" data-validate="Nome é obrigatório">
+						<input class="input3" type="text" name="name" placeholder="Apelido"/>
+                    </div>						
+
+                        <div class="wrap-input3 validate-input">
+                                <div>
+                                     <input class="input3" type="number" name="name" placeholder="Idade do pet"/>
+                                </div>
+                            <span class="focus-input3"></span>
+                    </div>
+
+                        <div class="wrap-input3 validate-input">
+                                <div>
+                                    <li>
+                            <select class="select3" required  style="box-shadow: 0 0 0 0;border: 0 none;outline: 0;">
+                                    <option value="" disabled selected>Porte:</option>
+                                    <option value="pequeno">Pequeno</option>
+                                    <option value="medio">Médio</option>
+                                    <option value="grande">Grande</option>
+                            </select>
+  
+                                </div>
+                            <span class="focus-input3"></span>
+                    </div>
+
+                    <div class="wrap-input3 validate-input">
+                                <div>
+                            <select class="select3" required  style="box-shadow: 0 0 0 0;border: 0 none;outline: 0;">
+                                    <option value="" disabled selected>Cor do animal:</option>
+                                    <option value="amarelo">Amarelo</option>
+                                    <option value="chocolate">Chocolate</option>
+                                    <option value="branco">Branco</option>
+                                    <option value="preto">Preto</option>
+                                    <option value="cinzento">Cinzento</option>
+                                    <option value="dourado">Dourado</option>
+                                    <option value="creme">Creme</option>
+                                    <option value="azul">Azul</option>
+                                    <option value="vermelho">Vermelho</option>
+                                    <option value="bicolores">Bicolores</option>
+                                    <option value="fulvobranco">Fulvo com Branco</option>
+                                    <option value="tigrado">Tigrado</option>
+                                    <option value="merle">Merle</option>
+                                    <option value="arlequim">Arlequim</option>
+                                    <option value="lobeiro">Lobeiro</option>
+                                    <option value="salpimenta">Sal e Pimenta</option>
+                                    <option value="ruao">Ruão</option>
+                                    <option value="pintaigado">Pintagaido</option>
+                                    <option value="beltons">Beltons</option>
+                            </select>
+                                </div>
+                            <span class="focus-input3"></span>
+                    </div>
+
+                    <div class="wrap-input3 validate-input" data-validate="Nome é obrigatório">
+                            <input class="input3" type="text" name="name" placeholder="Raça do animal"/>
+                        </div>	
+
+                    <div class="wrap-input3 validate-input">
+                            <div>
+                                <textarea class="input3" name="message" placeholder="Hobbies"></textarea>
+                            </div>
+                            <span class="focus-input3"></span>
+                        </div>
+
+                        <div class="wrap-input3 validate-input">
+                                <div>
+                                    <textarea class="input3" name="message" placeholder="Histórico de vacinas"></textarea>
+                                </div>
+                                <span class="focus-input3"></span>
+                            </div>
+
+                            <div class="wrap-input3 validate-input">
+                                    <div>
+                                        <input class="input3" name="email" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Data da ultima Vacina">
+                                    </div>
+                                    <span class="focus-input3"></span>
+                                </div>
+                            
+
+					<div class="container-contact3-form-btn">
+						<button class="contact3-form-btn">
+							Confirmar
+						</button>
+					</div>
+				</form>
+            </div>
+
+		</div>
+	</div>
+
+<!--===============================================================================================-->
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	
+
+</body>
+</html>
