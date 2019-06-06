@@ -129,8 +129,26 @@ public class LoginController {
 		model.clear();
 		if(usuarioLogado != null) {
 			model.addObject(usuarioLogado);
-			model.setViewName("tela_perfil");
+			model.setViewName("atualiza_perfil");
 			return model;
 		} else return exibirPaginaDeLogin() ;
+	}
+	
+	@GetMapping("/perfildog")
+	public ModelAndView exibirPaginaDePerfildog() {
+		model.clear();
+		if(usuarioLogado != null) {
+			model.addObject(usuarioLogado);
+			model.setViewName("perfil_cachorro");
+			return model;
+		} else return exibirPaginaDeLogin() ;
+	}
+	
+	@GetMapping("/home")
+	public ModelAndView exibirPaginaHome() {
+		model.clear();
+		model.setViewName("home_page");
+		return model;
+		
 	}
 }

@@ -39,29 +39,26 @@
 		</head>
 
 		<body class="blog-page">
-		<form>
-		
-		</form>
 		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
 			<h1 id="colorlib-logo"><a href="index.html"><span class="img" style="background-image: url(img/author.jpg);"></span><p style="color: orangered; font-size: 18px">Carlos PH</p></h1>
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
-					<li style=" margin-top: 18px;"><a style="color: orangered; font-size: 16px" href="blog-home.html">Home</a></li>
-					<li style=" margin-top: 18px;"><a style="color: orangered; font-size: 16px" href="perfil">Perfil Usuário</a></li>
-					<li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="about.html">Perfil Dog</a></li>
-					<li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="services.html">Configurações</a></li>
-					<li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="home_page.html">Sair</a></li>
+					<li style=" margin-top: 18px;"><a style="color: orangered; font-size: 16px" href="principal">Home</a></li>
+					<li style=" margin-top: 18px;"><a style="color: orangered; font-size: 16px" href="perfil"> Atualizar Perfil</a></li>
+					<li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="perfildog">Cadastrar Dog</a></li>
+					<li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="principal">Configurações</a></li>
+					<li style=" margin-top: 18px;"><a style="color: orangered;font-size: 16px" href="home">Sair</a></li>
 				</ul>
 			</nav>
 		</aside> <!-- END COLORLIB-ASIDE -->							
 				
 			<!-- Start post-content Area -->
-			<section class="post-content-area">
+			<section class="post-content-area cursos">
 				<div class="container" style="float: right;">
 					<div class="row">
             <div class="col-lg-8">
-			<div class="main-ws-sec">
-                  <div class="post-topbar">
+<div class="main-ws-sec">
+                  <div  class="post-topbar">
                     <div class="user-picy">
                       <img src="images/resources/user-pic.png" alt="">
                     </div>
@@ -77,8 +74,8 @@
                         <div class="usy-dt">
                           <img src="images/resources/us-pic.png" alt="">
                           <div class="usy-name">
-                            <h3 th:text="${p.apelido}" ></h3>
-                            <span><img src="images/clock.png" alt=""></span>
+                            <h3 th:text="${p.apelido}"></h3>
+                            <span><img src="images/clock.png" alt="">3 min atrás</span>
                           </div>
                         </div>
                       </div>
@@ -87,11 +84,9 @@
                       </div>
                       <div class="job-status-bar">
                         <ul class="like-com">
-                          <li>
-                          	<form action="#" th:action="@{/match}" th:object="${p}" method="post">
-                          		<button><i class="la la-heart"></i> Curtir</button>
-                          	</form>
-                            
+                          <li th:switch="${p.apelido}">
+                            <a th:case="fofinho" onclick="document.getElementById('id01').style.display='block'" class="com"><i class="la la-heart"></i> Curtidas: 25</a>
+                            <a th:case="*" onclick="document.getElementById('id01').style.display='block'" class="com"><i class="la la-heart"></i> Curtidas: 25</a>
                           </li> 
                           <li><a href="#" title="" class="com"> Comentários 15</a></li>
                         </ul>
@@ -99,7 +94,7 @@
                       </div>
                     </div><!--post-bar end-->
                     
-                  
+                   
                     <div class="process-comm">
                       <a href="#" title=""><img src="images/process-icon.png" alt=""></a>
                     </div><!--process-comm end-->
@@ -108,11 +103,76 @@
               </div>
 						<div class="col-lg-4 sidebar-widgets">
 							<div class="widget-wrap">
-								<div class="single-sidebar-widget search-widget">
+								<div class="single-sidebar-widge  t search-widget">
 									<form class="search-form" action="#" th:action="@{/principal}" th:object="${pesquisa}" method="post">
-			                            <input placeholder="Pesquise" th:field="*{busca}" name="busca" type="text" style='width:70%;outline: 0;box-shadow: none ! important;' onblur="this.placeholder = 'Pesquise'">
+			                            <input placeholder="Pesquise" th:field="*{busca}" name="busca" type="text"  onblur="this.placeholder = 'Pesquise'" style="outline: 0;box-shadow: none ! important;"/>
 			                            <button type="submit" style="outline: 0;box-shadow: none ! important;"><i class="fa fa-search"></i></button>
-			                        </form>
+                              </form>
+                              
+                              <div class="single-sidebar-widget post-category-widget">
+                                <h4 class="category-title">Filtro</h4>
+                                <ul class="cat-list">
+                                  <li>
+                                    <select class="custom-select" id="inputGroupSelect01">
+                                        <option value="" disabled selected>Idade do animal:</option>
+                                        <option value="1">1 ano</option>
+                                        <option value="2">2 anos</option>
+                                        <option value="3">3 anos</option>
+                                        <option value="4">4 anos</option>
+                                        <option value="5">5 anos</option>
+                                        <option value="6">6 anos</option>
+                                        <option value="7">7 anos</option>
+                                        <option value="8">8 anos</option>
+                                        <option value="9">9 anos</option>
+                                        <option value="10">10 anos</option>
+                                        <option value="11">11 anos</option>
+                                        <option value="12">12 anos</option>
+                                        <option value="13">13 anos</option>
+                                        <option value="14">14 anos</option>
+                                        <option value="15">15 anos</option>
+                                        <option value="16">16 anos</option>
+                                        <option value="17">17 anos</option>
+                                        <option value="18">18 anos</option>
+                                        <option value="19">19 anos</option>
+                                        <option value="20">20 anos</option>
+
+                                    </select>
+                                  </li>
+                                  <li>
+                                    <select class="custom-select" id="inputGroupSelect01">
+                                      <option value="" disabled selected>Cor do animal:</option>
+                                      <option value="amarelo">Amarelo</option>
+                                      <option value="chocolate">Chocolate</option>
+                                      <option value="branco">Branco</option>
+                                      <option value="preto">Preto</option>
+                                      <option value="cinzento">Cinzento</option>
+                                      <option value="dourado">Dourado</option>
+                                      <option value="creme">Creme</option>
+                                      <option value="azul">Azul</option>
+                                      <option value="vermelho">Vermelho</option>
+                                      <option value="bicolores">Bicolores</option>
+                                      <option value="fulvobranco">Fulvo com Branco</option>
+                                      <option value="tigrado">Tigrado</option>
+                                      <option value="merle">Merle</option>
+                                      <option value="arlequim">Arlequim</option>
+                                      <option value="lobeiro">Lobeiro</option>
+                                      <option value="salpimenta">Sal e Pimenta</option>
+                                      <option value="ruao">Ruão</option>
+                                      <option value="pintaigado">Pintagaido</option>
+                                      <option value="beltons">Beltons</option>
+                                    </select>
+
+                                  </li>
+                                  <li>
+                                      <select class="custom-select" id="inputGroupSelect01">
+                                        <option value="" disabled selected>Porte:</option>
+                                                    <option value="pequeno" >Pequeno</option>
+                                                    <option value="medio">Médio</option>
+                                                    <option value="grande">Grande</option>
+                                      </select>
+                                  </li>
+                                </ul>
+                              </div>	             
 								</div>			
 								<div class="single-sidebar-widget popular-post-widget">
 									<h4 class="popular-title">Meus Dogs</h4>
@@ -126,8 +186,8 @@
 												<p> <span class="lnr lnr-eye"></span> 120 Visualizações</p>
 
                       </div>                     </div>
-<div class="single-post-list d-flex flex-row align-items-center">
-<div class="thumb" style="width: 40%">                         <img class
+                <div class="single-post-list d-flex flex-row align-items-center">
+                  <div class="thumb" style="width: 40%">                         <img class
 ="img-fluid" style="border-radius: 45%" src="img/dog2.jpg" alt="">
 </div>                       <div class="details">                         <a
 href="blog-single.html"><h6>Thor</h6></a>                         <p> <span
@@ -174,5 +234,6 @@ class="lnr lnr-eye"></span> 100 Visualizações</p>                       </div>
              new nicEditor({fullPanel : true}).panelInstance('area2');
         }); // convert text area with id area2 to rich text editor with full panel.
 </script>
+
 
  
