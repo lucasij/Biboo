@@ -29,7 +29,7 @@
                       </div>
                       
                       <nav id="nav-menu-container">
-						<form action="#" th:action="@{/login}" th:object="${credenciais}" method="post" onsubmit="return validaForm(this);">
+						<form action="#" th:action="@{/login}" th:object="${credenciais}" method="post">
 							<ul class="nav-menu">
                           	<li><input placeholder="Nome" class="loginput teste" th:field="*{nome}" type="text" name="nome"></li>
                            	<li><input placeholder="Senha" class="loginput teste" th:field="*{senha}" type="Password" name="senha"> </li>
@@ -48,20 +48,23 @@
               </header>
          
             <div class="signup-content">
-                <form method="POST" id="signup-form" class="signup-form">
+                <form action="#" th:action="@{/cadastro}" th:object="${usuario}" method="post" onsubmit="return validaForm(this);f" class="signup-form">
                     <h2>       Cadastre-se     </h2>
                     <p class="desc"> Faça sua conta </p>
                     <div class="form-group">
-                        <input type="text" class="form-input" name="name" id="name" placeholder="Nome"/>
+                        <input type="text" class="form-input" th:field="*{CPF}" id="CPF" placeholder="CPF"/>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-input" name="email" id="email" placeholder="Email"/>
+                        <input type="text" class="form-input" th:field="*{nome}" id="name" placeholder="Nome"/>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-input" name="password" id="password" placeholder="Senha"/>
+                        <input type="email" class="form-input" th:field="*{email}" id="email" placeholder="Email"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-input" th:field="*{senha}" id="password" placeholder="Senha"/>
                     </div>
                      <div class="form-group">
-                        <input type="password" class="form-input" name="password" id="password" placeholder="Confirme sua senha"/>
+                        <input type="password" class="form-input" id="confPassword" placeholder="Confirme sua senha"/>
                     </div>
                     <div class="form-group">
                         <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
@@ -80,5 +83,17 @@
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+    	function validaForm(form){
+    		if(form.password.value != form.confPassword.value){
+	    		alert("Senhas não identicas");
+    			return false;    			
+    		}
+    		
+    		
+    	}
+    
+    
+    </script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

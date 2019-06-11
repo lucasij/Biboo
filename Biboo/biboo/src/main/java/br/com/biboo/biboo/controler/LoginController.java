@@ -51,12 +51,14 @@ public class LoginController {
 		model.clear();
 		this.usuarioLogado = null;
 		model.addObject(new Credenciais(null, null));
+		model.addObject(new Usuario(null, null, null, null, null, null));
 		model.setViewName("index");
 		return model;
 	}
 	
 	@PostMapping("/cadastro")
 	public ModelAndView efetuarcadastro(@ModelAttribute Usuario usuario) {
+		System.out.println(usuario.getCPF());
 		todosUsuarios.save(usuario);
 		usuarioLogado = usuario;
 		return exibirPáginaPrincinpal();
@@ -65,7 +67,6 @@ public class LoginController {
 	@GetMapping("/cadastro")
 	public ModelAndView exibirPaginaDeCadastro() {
 		model.clear();
-		model.addObject(new Usuario(null, null, null, null, null, null));
 		model.setViewName("cadastro");
 		return model;
 	}
