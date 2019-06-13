@@ -229,7 +229,16 @@ class="lnr lnr-eye"></span> 100 Visualizações</p>                       </div>
         bkLib.onDomLoaded(function() {
              new nicEditor().panelInstance('area1');
         }); // convert text area with id area1 to rich text editor.
+        <script type="text/javascript" th:inline="javascript">
+        /*<![CDATA[*/
 
+        var theList = [[${modelAttribute}]]
+        for (i = 0; i < theList.length; i++) {
+            doSomething(theList[i]);
+        }
+
+        /*]]>*/
+    </script>
         bkLib.onDomLoaded(function() {
              new nicEditor({fullPanel : true}).panelInstance('area2');
         }); // convert text area with id area2 to rich text editor with full panel.
