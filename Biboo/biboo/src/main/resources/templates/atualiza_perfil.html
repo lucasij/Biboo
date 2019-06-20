@@ -26,7 +26,7 @@
 </head>
 <body>
     <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-        <h1 id="colorlib-logo"><a href="index.html"><span class="img" style="background-image: url(img/author.jpg);"></span><p style="color: orangered; font-size: 18px">Carlos PH</p></h1>
+        <h1 id="colorlib-logo"><a href="index.html"><span class="img" style="background-image: url(img/author.jpg);"></span><p th:text="${usuario.nome}" style="color: orangered; font-size: 18px">Carlos PH</p></h1>
         <nav id="colorlib-main-menu" role="navigation">
             <ul>
                 <li style=" margin-top: 18px;"><a style="color: orangered; font-size: 16px" href="principal">Home</a></li>
@@ -40,7 +40,7 @@
 	<div class="bg-contact3" style="background-image: url('img/doguinho-17.jpg');">
 		<div class="container-contact3">
 			<div class="wrap-contact3" style="margin-left: 18rem">
-				<form class="contact3-form validate-form">
+				<form action="#" th:action="@{/setusuario}" th:object="${usuario}" method="post" class="contact3-form validate-form">
 					<span class="contact3-form-title">
 						Atualizar Perfil
 					</span>
@@ -129,7 +129,7 @@
                         </div>
 
 					<div class="container-contact3-form-btn">
-						<button class="contact3-form-btn">
+						<button type="submit" class="contact3-form-btn">
 							Atualizar
 						</button>
 					</div>

@@ -58,7 +58,6 @@ public class LoginController {
 	
 	@PostMapping("/cadastro")
 	public ModelAndView efetuarcadastro(@ModelAttribute Usuario usuario) {
-		System.out.println(usuario.getCPF());
 		todosUsuarios.save(usuario);
 		usuarioLogado = usuario;
 		return exibirPáginaPrincinpal();
@@ -104,6 +103,7 @@ public class LoginController {
 		}
 		model.addObject("pets",p);
 		model.addObject("pesquisa", new Pesquisa(null));
+		model.addObject("usuario",usuarioLogado);
 		model.setViewName("blog-home");
 		return model;
 	}
@@ -129,7 +129,7 @@ public class LoginController {
 	public ModelAndView exibirPaginaDePerfil() {
 		model.clear();
 		if(usuarioLogado != null) {
-			model.addObject(usuarioLogado);
+			model.addObject("usuario",usuarioLogado);
 			model.setViewName("atualiza_perfil");
 			return model;
 		} else return exibirPaginaDeLogin() ;
