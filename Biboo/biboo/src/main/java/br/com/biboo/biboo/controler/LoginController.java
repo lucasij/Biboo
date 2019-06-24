@@ -121,6 +121,7 @@ public class LoginController {
 		}
 		model.addObject("pets",p);
 		model.addObject("pesquisa", new Pesquisa(null));
+		model.addObject("usuario",usuarioLogado);
 		model.setViewName("blog-home");
 		return model;
 	}
