@@ -135,6 +135,12 @@ public class LoginController {
 		} else return exibirPaginaDeLogin() ;
 	}
 	
+	@PostMapping("/setusuario")
+	public ModelAndView alterarUsuario(@ModelAttribute Usuario usuario) {
+		todosUsuarios.save(usuario);
+		return exibirPaginaDePerfil();
+	}
+	
 	@GetMapping("/perfildog")
 	public ModelAndView exibirPaginaDePerfildog() {
 		model.clear();
@@ -143,6 +149,13 @@ public class LoginController {
 			model.setViewName("perfil_cachorro");
 			return model;
 		} else return exibirPaginaDeLogin() ;
+	}
+	
+	@GetMapping("/match")
+	public ModelAndView exibirMatchs(){
+		model.clear();
+		model.setViewName("relat_match");
+		return model;
 	}
 	
 	@GetMapping("/home")

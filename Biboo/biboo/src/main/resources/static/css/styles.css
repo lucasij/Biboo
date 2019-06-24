@@ -3485,7 +3485,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .widget-wrap .search-widget form.search-form button {
   float: left;
   width: 20%;
-  padding: 9px;
+  padding: 10px;
   background: #fab700;
   color: white;
   font-size: 17px;
